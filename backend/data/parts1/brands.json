@@ -1,0 +1,382 @@
+[
+  {
+    "appliance": "Dishwasher",
+    "brand": "Admiral",
+    "brand_url": "https://www.partselect.com/Admiral-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Amana",
+    "brand_url": "https://www.partselect.com/Amana-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Beko",
+    "brand_url": "https://www.partselect.com/Beko-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Blomberg",
+    "brand_url": "https://www.partselect.com/Blomberg-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Bosch",
+    "brand_url": "https://www.partselect.com/Bosch-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Caloric",
+    "brand_url": "https://www.partselect.com/Caloric-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Crosley",
+    "brand_url": "https://www.partselect.com/Crosley-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Dacor",
+    "brand_url": "https://www.partselect.com/Dacor-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Electrolux",
+    "brand_url": "https://www.partselect.com/Electrolux-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Estate",
+    "brand_url": "https://www.partselect.com/Estate-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Frigidaire",
+    "brand_url": "https://www.partselect.com/Frigidaire-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Gaggenau",
+    "brand_url": "https://www.partselect.com/Gaggenau-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "GE",
+    "brand_url": "https://www.partselect.com/GE-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Gibson",
+    "brand_url": "https://www.partselect.com/Gibson-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Haier",
+    "brand_url": "https://www.partselect.com/Haier-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Hotpoint",
+    "brand_url": "https://www.partselect.com/Hotpoint-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Inglis",
+    "brand_url": "https://www.partselect.com/Inglis-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Jenn-Air",
+    "brand_url": "https://www.partselect.com/Jenn-Air-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Kelvinator",
+    "brand_url": "https://www.partselect.com/Kelvinator-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Kenmore",
+    "brand_url": "https://www.partselect.com/Kenmore-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "KitchenAid",
+    "brand_url": "https://www.partselect.com/KitchenAid-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "LG",
+    "brand_url": "https://www.partselect.com/LG-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Magic Chef",
+    "brand_url": "https://www.partselect.com/Magic-Chef-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Maytag",
+    "brand_url": "https://www.partselect.com/Maytag-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Midea",
+    "brand_url": "https://www.partselect.com/Midea-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Norge",
+    "brand_url": "https://www.partselect.com/Norge-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Roper",
+    "brand_url": "https://www.partselect.com/Roper-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Samsung",
+    "brand_url": "https://www.partselect.com/Samsung-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "SMEG",
+    "brand_url": "https://www.partselect.com/SMEG-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Speed Queen",
+    "brand_url": "https://www.partselect.com/Speed-Queen-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Tappan",
+    "brand_url": "https://www.partselect.com/Tappan-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Thermador",
+    "brand_url": "https://www.partselect.com/Thermador-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Uni",
+    "brand_url": "https://www.partselect.com/Uni-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "Whirlpool",
+    "brand_url": "https://www.partselect.com/Whirlpool-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Dishwasher",
+    "brand": "White-Westinghouse",
+    "brand_url": "https://www.partselect.com/White-Westinghouse-Dishwasher-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Admiral",
+    "brand_url": "https://www.partselect.com/Admiral-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Amana",
+    "brand_url": "https://www.partselect.com/Amana-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Beko",
+    "brand_url": "https://www.partselect.com/Beko-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Blomberg",
+    "brand_url": "https://www.partselect.com/Blomberg-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Bosch",
+    "brand_url": "https://www.partselect.com/Bosch-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Caloric",
+    "brand_url": "https://www.partselect.com/Caloric-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Crosley",
+    "brand_url": "https://www.partselect.com/Crosley-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Dacor",
+    "brand_url": "https://www.partselect.com/Dacor-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Dynasty",
+    "brand_url": "https://www.partselect.com/Dynasty-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Electrolux",
+    "brand_url": "https://www.partselect.com/Electrolux-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Estate",
+    "brand_url": "https://www.partselect.com/Estate-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Frigidaire",
+    "brand_url": "https://www.partselect.com/Frigidaire-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Gaggenau",
+    "brand_url": "https://www.partselect.com/Gaggenau-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "GE",
+    "brand_url": "https://www.partselect.com/GE-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Gibson",
+    "brand_url": "https://www.partselect.com/Gibson-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Haier",
+    "brand_url": "https://www.partselect.com/Haier-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Hardwick",
+    "brand_url": "https://www.partselect.com/Hardwick-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Hoover",
+    "brand_url": "https://www.partselect.com/Hoover-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Hotpoint",
+    "brand_url": "https://www.partselect.com/Hotpoint-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Inglis",
+    "brand_url": "https://www.partselect.com/Inglis-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "International",
+    "brand_url": "https://www.partselect.com/International-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Jenn-Air",
+    "brand_url": "https://www.partselect.com/Jenn-Air-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Kelvinator",
+    "brand_url": "https://www.partselect.com/Kelvinator-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Kenmore",
+    "brand_url": "https://www.partselect.com/Kenmore-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "KitchenAid",
+    "brand_url": "https://www.partselect.com/KitchenAid-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "LG",
+    "brand_url": "https://www.partselect.com/LG-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Litton",
+    "brand_url": "https://www.partselect.com/Litton-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Magic Chef",
+    "brand_url": "https://www.partselect.com/Magic-Chef-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Maytag",
+    "brand_url": "https://www.partselect.com/Maytag-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Midea",
+    "brand_url": "https://www.partselect.com/Midea-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Norge",
+    "brand_url": "https://www.partselect.com/Norge-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "RCA",
+    "brand_url": "https://www.partselect.com/RCA-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Roper",
+    "brand_url": "https://www.partselect.com/Roper-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Samsung",
+    "brand_url": "https://www.partselect.com/Samsung-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Sharp",
+    "brand_url": "https://www.partselect.com/Sharp-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "SMEG",
+    "brand_url": "https://www.partselect.com/SMEG-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Tappan",
+    "brand_url": "https://www.partselect.com/Tappan-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Thermador",
+    "brand_url": "https://www.partselect.com/Thermador-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Uni",
+    "brand_url": "https://www.partselect.com/Uni-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "Whirlpool",
+    "brand_url": "https://www.partselect.com/Whirlpool-Refrigerator-Parts.htm"
+  },
+  {
+    "appliance": "Refrigerator",
+    "brand": "White-Westinghouse",
+    "brand_url": "https://www.partselect.com/White-Westinghouse-Refrigerator-Parts.htm"
+  }
+]

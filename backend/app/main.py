@@ -21,5 +21,5 @@ def health():
 
 @app.post("/chat", response_model=ChatResponse)
 def chat(req: ChatRequest):
-    result = answer_chat(req.message)
+    result = answer_chat(req.message,req.session_id)
     return result

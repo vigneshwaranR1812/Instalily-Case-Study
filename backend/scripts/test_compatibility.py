@@ -4,8 +4,8 @@ conn = sqlite3.connect("../data/storage/partselect.db")
 cur = conn.cursor()
 
 cur.execute("""
-SELECT * FROM products
-WHERE main_image IS NOT NULL
+SELECT * FROM compatible_models
+WHERE partselect_number = 'PS11756150'
 LIMIT 10
 """)
 

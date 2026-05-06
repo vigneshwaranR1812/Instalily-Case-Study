@@ -40,3 +40,19 @@ def check_compatibility(part_number: str, model_number: str):
     conn.close()
 
     return dict(row) if row else None
+
+def get_compatible_models_for_part(part_number: str, limit: int = 20):
+    conn = get_conn()
+    cur = conn.cursor()
+
+    cur.execute("""
+        SELECT brand, model_number, model_url, description
+        FROM compatible_models
+        WHERE partselect_number = ?
+        LIMIT ?
+    """, (part_number, limit))
+
+    rows = cur.fetchall()
+    conn.close()
+
+    return [dict(row) for row in rows]

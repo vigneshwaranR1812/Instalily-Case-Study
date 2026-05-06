@@ -12,3 +12,5 @@ class ChatResponse(BaseModel):
     intent: str
     products: List[Dict[str, Any]] = []
     sources: List[Dict[str, Any]] = []
+    suggested_actions: List[Dict[str, Any]] = []
+    needs_model_number: bool = False

@@ -65,6 +65,7 @@ VALID_INTENTS = {
     "compatibility",
     "installation",
     "troubleshooting",
+    "compatible_models_lookup",
     "out_of_scope",
 }
 
@@ -95,7 +96,12 @@ Classify the user message into exactly one intent:
 - Example: "Dishwasher rack not sliding properly"
 - Example: "My Whirlpool fridge ice maker is not working"
 
-5. out_of_scope
+5. compatible_models_lookup
+- User asks which appliance models are compatible with a part.
+- Example: "What models are compatible with PS11752778?"
+- Example: "List compatible models for this part"
+
+6. out_of_scope
 - Anything not related to refrigerator/dishwasher parts, repair, troubleshooting, installation, or compatibility.
 
 Return ONLY valid JSON:

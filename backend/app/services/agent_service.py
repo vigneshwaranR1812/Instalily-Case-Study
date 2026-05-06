@@ -1,5 +1,5 @@
 from app.router import classify_intent, extract_part_number, extract_model_number,extract_entities_with_llm
-from app.services.sqlite_service import find_product_by_part_number, check_compatibility
+from app.services.sqlite_service import find_product_by_part_number, check_compatibility, get_compatible_models_for_part
 from app.services.pinecone_service import search_repair_docs
 from app.llm import call_llm
 from app.memory import get_memory, update_memory
@@ -76,11 +76,62 @@ Write a helpful product summary.
         else:
             answer = f"I could not verify that part {part} is compatible with model {model}."
 
+        product = find_product_by_part_number(part)
+
+        return {
+            "answer": answer,
+            "intent": intent,
+            "products": [product] if product else [],
+            "sources": [result] if result else [],
+            "suggested_actions": [],
+            "needs_model_number": False
+        }
+
+    if intent == "compatible_models_lookup":
+        part = extract_part_number(message)
+
+        if part is None:
+            part = memory["last_part_number"]
+
+        if part is None:
+            return {
+                "answer": "Please provide the PartSelect part number so I can list compatible models.",
+                "intent": intent,
+                "products": [],
+                "sources": [],
+                "suggested_actions": [],
+                "needs_model_number": False
+            }
+
+        update_memory(session_id, part_number=part)
+
+        models = get_compatible_models_for_part(part)
+
+        if not models:
+            return {
+                "answer": f"I could not find compatible model data for {part}.",
+                "intent": intent,
+                "products": [],
+                "sources": [],
+                "suggested_actions": [],
+                "needs_model_number": False
+            }
+
+        answer = f"I found {len(models)} compatible models for part {part}. Here are some of them."
+
         return {
             "answer": answer,
             "intent": intent,
             "products": [],
-            "sources": [result] if result else []
+            "sources": models,
+            "suggested_actions": [
+                {
+                    "type": "check_compatibility",
+                    "label": "Check my model number",
+                    "part_number": part
+                }
+            ],
+            "needs_model_number": False
         }
 
     if intent in ["installation", "troubleshooting"]:
@@ -140,7 +191,16 @@ Use only the provided context and product data.
             "answer": call_llm(prompt),
             "intent": intent,
             "products": products,
-            "sources": [d["metadata"] for d in docs]
+            "sources": [d["metadata"] for d in docs],
+            "needs_model_number": True if products else False,
+            "suggested_actions": [
+                {
+                    "type": "check_compatibility",
+                    "label": f"Check if {p['partselect_number']} fits my model",
+                    "part_number": p["partselect_number"]
+                }
+                for p in products
+            ]
         }
 
     return {

@@ -24,7 +24,6 @@ If not found, return null.
 User query:
 {message}
 """
-    print(message)
     response = client.chat.completions.create(
         model="gpt-4.1-mini",
         messages=[{"role": "user", "content": prompt}],
@@ -36,12 +35,9 @@ User query:
     # remove markdown fences
     content = content.replace("```json", "").replace("```", "").strip()
 
-    print("RAW LLM OUTPUT:", content)
-
     try:
         import json
         data = json.loads(content)
-        print(data)
         return data.get("part_number"), data.get("model_number")
     except:
         return None, None

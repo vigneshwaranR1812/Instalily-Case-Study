@@ -21,7 +21,7 @@ def embed_query(text: str):
     return response.data[0].embedding
 
 
-def search_namespace(query: str, namespace: str, top_k: int = 3):
+def search_namespace(query: str, namespace: str, top_k: int = 5):
     vector = embed_query(query)
 
     results = index.query(
@@ -44,8 +44,8 @@ def search_namespace(query: str, namespace: str, top_k: int = 3):
 
 
 def search_repair_docs(query: str):
-    repair_docs = search_namespace(query, "repair_guides", 3)
-    blog_docs = search_namespace(query, "blog_articles", 2)
-    product_docs = search_namespace(query, "product_docs", 2)
+    repair_docs = search_namespace(query, "repair_guides", 5)
+    blog_docs = search_namespace(query, "blog_articles", 5)
+    product_docs = search_namespace(query, "product_docs", 5)
 
     return repair_docs + blog_docs + product_docs

@@ -19,7 +19,6 @@ def answer_chat(message: str, session_id:str):
 
     if intent == "product_lookup":
         part = extract_part_number(message)
-        print(f"Extracted part number: {part}")
         if part:
             update_memory(session_id, part_number=part)
         product = find_product_by_part_number(part)
@@ -53,13 +52,11 @@ Write a helpful product summary.
 
     if intent == "compatibility":
         part, model = extract_entities_with_llm(message)
-        print(f"Extracted part: {part}, model: {model}")
         if part is None:
             part = memory["last_part_number"]
 
         if model is None:
             model = memory["last_model_number"]
-        print(f"Using part: {part}, model: {model} from memory")
         update_memory(session_id, part_number=part, model_number=model)
         if part is None or model is None:
             return {
@@ -135,7 +132,88 @@ Write a helpful product summary.
         }
 
     if intent in ["installation", "troubleshooting"]:
+        import re
+
+        part_number = extract_part_number(message)
+        products = []
+        docs = []
+
+        # CASE 1: User mentioned a specific PartSelect part number
+        if part_number:
+            product = find_product_by_part_number(part_number)
+
+            if not product:
+                return {
+                    "answer": f"I could not find product data for {part_number}. Please check the part number.",
+                    "intent": intent,
+                    "products": [],
+                    "sources": [],
+                    "needs_model_number": False,
+                    "suggested_actions": []
+                }
+
+            products = [product]
+
+            # Search Pinecone with richer query using product data
+            search_query = f"""
+            {message}
+            Part number: {product.get("partselect_number")}
+            Product name: {product.get("name")}
+            Description: {product.get("description")}
+            Symptoms: {product.get("symptoms")}
+            Installation complexity: {product.get("installation_complexity")}
+            Installation time: {product.get("installation_time")}
+            """
+
+            docs = search_repair_docs(search_query)
+
+            context = "\n\n".join(
+                f"Source: {d['metadata']}\nContent: {d['content']}"
+                for d in docs
+            )
+
+            prompt = f"""
+    {SYSTEM_RULES}
+
+    User asked:
+    {message}
+
+    The user provided a specific PartSelect part number.
+
+    Verified SQLite product data:
+    {product}
+
+    Retrieved PartSelect repair/install context:
+    {context}
+
+    Rules:
+    - Treat the SQLite product data as the source of truth for the part name, part number, symptoms, installation time, installation complexity, video URL, and product URL.
+    - If exact installation instructions are not available in the retrieved context, say that the exact official step-by-step instructions were not found in the available data.
+    - You may give general safe guidance only if it is clearly based on the product type and context.
+    - Do not invent hidden screws, clips, tools, wiring, or appliance-specific steps unless present in the context.
+    - If the user asks troubleshooting, explain likely checks using the product symptoms/description and retrieved context.
+    - Keep the answer practical and honest.
+
+    Return a clear customer-facing answer.
+    """
+
+            return {
+                "answer": call_llm(prompt),
+                "intent": intent,
+                "products": products,
+                "sources": [d["metadata"] for d in docs],
+                "needs_model_number": True,
+                "suggested_actions": [
+                    {
+                        "type": "check_compatibility",
+                        "label": f"Check if {product['partselect_number']} fits my model",
+                        "part_number": product["partselect_number"]
+                    }
+                ]
+            }
+
         docs = search_repair_docs(message)
+
 
         context = "\n\n".join(
             f"Source: {d['metadata']}\nContent: {d['content']}"

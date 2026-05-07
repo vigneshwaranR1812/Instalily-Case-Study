@@ -30,7 +30,8 @@ def create_tables(conn):
         installation_complexity TEXT,
         installation_time TEXT,
         rating_value REAL,
-        rating_count INTEGER
+        rating_count INTEGER,
+        symptoms TEXT
     );
     """)
 
@@ -85,9 +86,10 @@ def ingest_products(conn):
                 installation_complexity,
                 installation_time,
                 rating_value,
-                rating_count
+                rating_count,
+                symptoms
             )
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (
                 partselect_number,
                 item.get("manufacturer_part_number"),
@@ -104,6 +106,7 @@ def ingest_products(conn):
                 item.get("installation_time"),
                 item.get("rating_value"),
                 item.get("rating_count"),
+                json.dumps(item.get("symptoms") or []) 
             ))
 
             inserted += 1

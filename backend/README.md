@@ -32,7 +32,7 @@ The backend combines:
 | LLM               | **OpenAI GPT-4.1 Mini**            |
 | Data Processing   | **JSONL + Selenium**               |
 | API Server        | **Uvicorn**                        |
-| Styling           | **Custom CSS (Apple-inspired UI)** |
+| Styling           | **Custom CSS** |
 | Hosting           | **Local / AWS EC2 / Render**       |
 
 
@@ -48,7 +48,7 @@ backend/
 │   ├── llm.py
 │   ├── router.py
 │   ├── schemas.py
-|   ├── memory.py
+│   ├── memory.py
 │   │
 │   └── services/
 │       ├── sqlite_service.py
@@ -70,9 +70,9 @@ backend/
 │   ├── blog_data/
 │   ├── repair_data/
 │   └── storage/
-|
+│
 ├── scrappers/
-|
+│
 ├── requirements.txt
 └── README.md
 ```
@@ -96,8 +96,6 @@ Before starting, make sure you have:
 ## Clone Repository
 
 ```bash
-git clone <your-repository-url>
-cd backend
 git clone https://github.com/vigneshwaranR1812/Instalily-Case-Study.git
 cd instalily-case-study/backend
 ```
@@ -176,34 +174,6 @@ data/storage/partselect.db
 
 ---
 
-## SQLite Tables
-
-### products
-
-Stores:
-
-* Part numbers
-* Product metadata
-* Pricing
-* Availability
-* Symptoms
-* Ratings
-* Product images
-* Installation information
-
----
-
-### compatible_models
-
-Stores:
-
-* Appliance compatibility
-* Brand information
-* Appliance model numbers
-* Appliance descriptions
-* Model URLs
-
----
 
 ## Step 3.2 — Create Pinecone Index
 

@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #f5f5f7;
+  color: #1d1d1f;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "SF Pro Text",
+    "Inter",
+    "Segoe UI",
+    system-ui,
+    sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+.heading {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+
+  width: min(1440px, calc(100% - 40px));
+  height: 58px;
+  padding: 0 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.62));
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+
+  box-shadow:
+    0 22px 70px rgba(15, 23, 42, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+
+  color: #111827;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.heading::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.9), transparent);
+  transform: translateX(-120%);
+  transition: transform 0.75s ease;
+}
+
+.heading:hover::before {
+  transform: translateX(120%);
+}
+
+.heading::after {
+  content: "Refrigerator & Dishwasher Support";
+  color: #475569;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 640px) {
+  .heading {
+    top: 10px;
+    width: calc(100% - 20px);
+    height: 54px;
+    padding: 0 18px;
+  }
+
+  .heading::after {
+    display: none;
+  }
+}

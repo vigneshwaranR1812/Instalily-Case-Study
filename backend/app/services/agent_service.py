@@ -21,6 +21,8 @@ def answer_chat(message: str, session_id:str):
         part = extract_part_number(message)
         if part:
             update_memory(session_id, part_number=part)
+        else:
+            part = memory["last_part_number"]
         product = find_product_by_part_number(part)
 
         if not product:
